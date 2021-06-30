@@ -1,0 +1,18 @@
+<div class="main index">
+  <div class="container">
+  <% @rooms.each do |room| %>
+    <%= link_to(room_path(room), class: 'room-container') do %>
+       <%= image_tag "/room_images/#{room.image_name}" %>
+      <div class="room-name">
+          <%= room.name %>
+      </div>
+      <div class="room-address">
+        <%= room.address %>
+      </div>
+      <div class="room-price">
+        <p>一泊　<%= room.price %>円</p>
+      </div>
+    <% end %>
+  <% end %> 
+  </div>
+</div>

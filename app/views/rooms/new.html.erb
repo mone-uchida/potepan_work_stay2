@@ -1,0 +1,40 @@
+<div class="main new">
+ <h3>新しいルームを作成</h3>
+   <div class="room-form">
+    <%= form_with url:rooms_path, multipart: true, method: :post do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :name ,"ルーム名" %></th>
+          <td><%= f.text_field :name  %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :introduction ,"ルーム紹介" %></th>
+          <td><%= f.text_field :introduction %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :price ,"料金" %></th>
+          <td><%= f.number_field :price %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :address ,"場所" %></th>
+          <td><%= f.text_field :address %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :image ,"ルーム画像" %></th>
+          <td><%= f.file_field :image %></td>
+        </tr>
+
+      </table>
+ 
+      <div>
+        <ul>
+          <li><%= f.submit "ルームを作成"%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+ </div>

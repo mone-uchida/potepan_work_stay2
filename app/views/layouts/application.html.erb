@@ -2,15 +2,67 @@
 <html>
   <head>
     <title>StayApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="wi dth=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
 
   <body>
+  <header>
+  <h1><%= link_to('Potepan Share','/',class:"header-logo") %></h1>
+  <div class="header-search">
+    <p>
+    <%= form_with url:address_path, method: :get,  class:"area-search" do |f| %>
+      <%= text_field_tag :address, value="東京" %>
+      <%= submit_tag '探す', :name => nil %>
+      <% end %>
+      </p>
+    <p>
+    <%= form_with url:search_path, method: :get do |f| %>
+      <%= text_field_tag :search, value="フリーワード" %>
+      <%= submit_tag '探す', :name => nil %>
+    <% end %>
+    </p>
+  </div>
+  <div class="header-user">
+  <% if @current_user %>
+  <p><%= @current_user.name %></p>
+  <div class="dropdown">
+    <div class="menu">
+      <div class="icon">
+      <%= image_tag "/user_images/#{@current_user.image_name}" %>
+      </div>
+      <div class="sub-menu">
+        <ul>
+          <li><%= link_to("ルーム登録", new_room_path ) %></li>
+          <li><%= link_to("予約したルーム一覧", "/#{@current_user.id}/reserved") %></li>
+          <li><%= link_to("登録したルーム一覧", "/#{@current_user.id}/record" ) %></li>
+          <li><%= link_to("設定",edit_user_path(@current_user) ) %></li>
+          <li><%= link_to("ログアウト", users_logout_path , {method: :post}) %></li>
+        </ul>
+      </div>
+    </div>
+</div>
+  <% else %>
+   <p><%= link_to('ログイン','/users/login') %></p>
+   <p><%= link_to("新規登録",:new_user) %></p>
+   <% end %>
+   </div>
+  </header>
+
+  <% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
     <%= yield %>
+
+    <footer>
+
+    </footer>
   </body>
 </html>

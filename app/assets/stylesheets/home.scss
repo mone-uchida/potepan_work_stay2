@@ -1,0 +1,17 @@
+.top{
+    background-image:url("/images/home_background.jpg");
+    background-color: aquamarine;
+    background-size:  cover;
+    height:650px;
+   }
+
+.home-search{
+   display:inline-block; 
+   width:35%;
+   float:left;
+   margin-top: 10%;
+   margin-left:8%;
+   padding:30px;
+   background:rgba(255, 255, 255, 0.75);
+   border-radius: 20px;
+}

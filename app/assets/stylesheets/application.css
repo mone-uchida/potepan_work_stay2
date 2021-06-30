@@ -1,15 +1,113 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ /*
+  * This is a manifest file that'll be compiled into application.css, which will include all the files |
+  * listed below.
+  *
+  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's |
+  * vendor/assets/stylesheets directory can be referenced here using a relative path. |
+  *
+  * You're free to add application-wide styles to this file and they'll appear at the bottom of the |
+  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS |
+  * files in this directory. Styles in this file should be added after the last require_* statement. |
+  * It is generally better to create a new file per style scope. |
+  *
+  *= require_tree .
+  *= require_self
+  */
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "メイリオ";
+    }
+
+header{
+    height:90px;
+    width: 100%;
+    background-color: 	#fce8ef;
+    text-decoration: none;
+}
+
+header ul{
+  list-style: none;
+}
+
+.header-logo{
+    font-size: 35px;
+    float:left;
+    padding: 15px 10px;
+    color:black;
+    text-decoration:none !important;
+}
+
+.header-search{
+    float:left;
+    padding: 10px;
+}
+
+.header-user{
+    float:right;
+    padding: 10px 20px;
+}
+
+  .menu{
+    display: block;
+  }
+
+ .header-user img{
+   border-radius: 50%;
+  width:  45px;
+  height: 45px;
+ }
+  
+  .sub-menu {
+    display: none;
+    background: white;
+    position: absolute;
+    top:58px;
+    right:40px;
+    text-align: center;
+    opacity: 0.85;
+    border-radius: 7px;
+    padding: 5px 5px;
+}
+  }
+  
+  .sub-menu  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+  }
+
+  .sub-menu  a {
+    text-decoration: none;
+  }
+  
+  .menu:hover .sub-menu {
+    display: inline-block;
+  }
+
+
+ #address{
+   width:100px;
+   height:30px;
+   padding: 0;
+  } 
+
+
+.flash{
+  font-size: 18px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+footer{
+    position:relative;
+    height:90px;
+    margin:0;
+    width: 100%;
+    display: inline-block;
+    background-color:#fce8ef;
+}

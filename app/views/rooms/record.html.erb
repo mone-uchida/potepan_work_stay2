@@ -1,0 +1,24 @@
+<div class="main record">
+ <h3>登録ルーム一覧</h3>
+  <div class="room-list">
+    <table>
+      <tbody>
+            <tr class="room-item">
+            <td>ルーム画像</td> 
+            <td>ルーム名</td> 
+            <td>ルーム紹介</td>　
+            <td>料金</td>
+            <td>作成日</td>
+            </tr>
+        <% @rooms.each do |room| %>
+          <tr>
+            <td><%= image_tag "/room_images/#{room.image_name}" %></td>
+            <td><%= room.name %></td>
+            <td><%= room.introduction %></td>
+            <td><%= room.price %>円</td>
+            <td><%= room.created_at.to_s(:datetime_jp) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
