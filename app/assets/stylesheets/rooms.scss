@@ -1,0 +1,144 @@
+.container{
+        width: 100%;
+        padding:30px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;   
+}
+
+.main{
+    width:100%;
+}
+
+.room-container{
+    display: table-cell;
+    vertical-align: middle;
+    width:20%;
+    padding: 10px 15px;
+    margin:5px 10px;
+    border:3px solid #ccc; 
+    font-size: large;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.room-container img{
+  width:  100%;
+  height:  65%;
+}
+
+.room-item{
+    font-weight:bold;
+}
+
+.room-name {
+    font-size: 25px;
+    color: #C71585;
+}
+
+.room-address{
+    color: black;
+}
+
+.room-price{
+    float: right;
+    margin-right:10%;
+    color: black;
+}
+
+.room-list{
+    width: 100%;
+    display: flex;
+}
+
+.room-list img{
+    width:  290px;
+  height:   200px;
+}
+
+table{
+ width:100%;
+ font-size: large;
+}
+
+
+.room-show{
+    display: inline-block;
+    padding:20px 40px;
+    height:200px;
+    width:18%;
+    position: relative;
+    display: inline-block;
+    float:left;
+}
+
+.show img{
+    margin:40px;
+    width:  450px;
+    height: 300px;
+    display: inline-block;
+    float:left;
+}
+
+.reserve{
+    float:right;
+    width:25%;
+    margin:40px 20px;
+    padding:20px;  
+    border:3px solid #ccc; 
+    float:right;
+}
+
+.reserve h4{
+    text-align:center;
+    font-size: large;
+}
+
+.reserve p{
+    float:right;
+}
+
+.reserve table{
+    height:300px;
+}
+
+.reserve tr{
+    margin:15px;
+}
+
+.reserve ul{
+    list-style: none;
+}
+
+.new h3{
+    margin:20px 0px 5px 30px;
+    background-color: #FFD700;
+    display: inline-block;
+    padding:3px 5px;
+    border-radius: 4px;
+}
+
+.room-form{
+    width:50%;
+    padding-bottom: 30px;
+    margin-bottom:30px;
+}
+
+.new tbody{
+    height:400px;
+}
+
+input#name,#introduction,#price,#address{
+    font-size: large;
+    height:30px;
+    width:90%;
+}
+
+input#introduction{
+    height:70px;
+}
+
+.new li{
+    float:right;
+    list-style: none;
+}

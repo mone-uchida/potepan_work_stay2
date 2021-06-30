@@ -1,0 +1,85 @@
+.new h3{
+    margin:20px 0px 5px 30px;
+    background-color: #FFD700;
+    display: inline-block;
+    padding:3px 5px;
+    border-radius: 4px;
+}
+
+.new-item{
+    margin-left: auto;
+    margin-right: auto;
+    padding:20px;
+    width:50%;
+    height:500px;
+}
+
+.new-item input{
+    width:100%;
+    height:30px;
+    font-size: large;
+}
+
+.new-item ul{
+    font-size: large;
+}
+
+.new-item li{
+    margin:7px;
+}
+
+.login h3{
+    margin:20px 0px 5px 30px;
+    background-color: #FFD700;
+    display: inline-block;
+    padding:3px 5px;
+    border-radius: 4px;
+}
+
+.login-item{
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    width:50%;
+    height:470px;
+}
+
+.login-item #password_digest,#email{
+    margin: 10px;
+    width:100%;
+    height:30px;
+    font-size: large;
+}
+
+.login-item ul{
+    list-style: none;
+    float:right;
+}
+
+
+.edit h3{
+    margin:20px 0px 5px 30px;
+    background-color: #FFD700;
+    display: inline-block;
+    padding:3px 5px;
+    border-radius: 4px;
+}
+
+.edit-item{
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    width:50%;
+    height:500px;
+}
+
+input #name,#image,#introduction{
+    padding:20px;
+    width:80%;
+}
+
+.edit-item ul{
+    list-style: none;
+    float:right;
+    padding:40px;
+}

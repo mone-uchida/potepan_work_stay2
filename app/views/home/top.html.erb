@@ -1,0 +1,11 @@
+<div class="top">
+<div class="home-search">
+<h1>Potepan Shareで新しい旅を</h1>
+<p>エリア</p>
+<%= form_with url:address_path, method: :get, class:"area-search" do |f| %>
+  <%= text_field_tag :address, value="東京" %>
+  <%= submit_tag '探す', :name => nil %>
+  <% end %>
+</div>
+</div>
+

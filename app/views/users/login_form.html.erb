@@ -1,0 +1,27 @@
+<div class="main login">
+ <h3>ログイン</h3>
+  <div class="login-item">
+    <%= form_with url:users_login_path do |f| %>
+      <table>
+ 
+        <tr>
+          <th><%= f.label :email ,"メールアドレス" %></th>
+          <td><%= f.text_field :email %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :password_digest ,"パスワード" %></th>
+          <td><%= f.text_field :password_digest %></td>
+        </tr>
+
+      </table>
+ 
+      <div>
+        <ul>
+          <li><%= f.submit "ログイン"%></li>
+        </ul>
+        <p><%= link_to "アカウントをお持ち出ない方はこちら",:new_user %></p>
+      </div>
+    <% end %>
+  </div> 
+</div>
